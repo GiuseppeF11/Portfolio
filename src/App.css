@@ -1,0 +1,13 @@
+.left-side {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.right-side {
+    height: 200vh;
+}
+
+.right-side, .left-side {
+    padding-top: 80px;
+}

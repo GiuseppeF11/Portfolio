@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at var(--gradient-position-x) var(--gradient-position-y), rgba(49, 71, 133, 0.633), transparent 20%), var(--background-color);
+  transition: background 0.1s ease-out;
+}
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  --background-color: #111F43; /* Colore di base */
+  --gradient-position-x: 0px; /* Posizione iniziale */
+  --gradient-position-y: 0px; /* Posizione iniziale */
+}
+
+.color-white {
+  color: aliceblue;
+}
+
+.color-gray {
+  color: #9ca3af;
+}
+
+.color-water{
+  color: #52CED0;
+}

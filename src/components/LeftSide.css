@@ -1,0 +1,66 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+}
+
+.name {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.role {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.routes-list {
+
+    .route, .line {
+        transition: 0.2s ease-in-out;
+    }
+    
+    
+    .route{
+        margin-bottom: 30px;
+        color: #9ca3af;
+        cursor: pointer;
+        font-size: 15px;
+        font-family: monospace;
+        font-weight: 600;
+        &:hover {
+            color: aliceblue;
+            .line {
+                width: 80px;
+                background-color: aliceblue;
+            }
+        }
+    }
+
+
+
+    .line {
+        width: 30px;
+        height: 2px;
+        background-color: #9ca3af;
+        margin-right: 20px;
+   }
+
+}
+
+
+.sites {
+    font-size: 25px;
+    color: #9ca3af;
+
+    a {
+        transition: 0.2s ease-in-out;
+    }
+
+    a:hover {
+        color: white;
+    }
+}
+
