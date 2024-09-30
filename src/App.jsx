@@ -31,7 +31,7 @@ function App() {
           <div className="left-side">
             <LeftSide />
           </div>
-          <div className="right-side border">
+          <div className="right-side ">
             <RightSide />
           </div>
         </div>

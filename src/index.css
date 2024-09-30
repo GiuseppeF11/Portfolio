@@ -7,10 +7,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  letter-spacing: 2px;
 }
 
 body {
-  background: radial-gradient(circle at var(--gradient-position-x) var(--gradient-position-y), rgba(49, 71, 133, 0.633), transparent 20%), var(--background-color);
+  background: radial-gradient(circle at var(--gradient-position-x) var(--gradient-position-y), rgba(17, 32, 68, 0.633), transparent 40%), var(--background-color);
   transition: background 0.1s ease-out;
 }
 
@@ -20,9 +21,9 @@ body {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  --background-color: #111F43; /* Colore di base */
-  --gradient-position-x: 0px; /* Posizione iniziale */
-  --gradient-position-y: 0px; /* Posizione iniziale */
+  --background-color: #0F172A;
+  --gradient-position-x: 0px;
+  --gradient-position-y: 0px;
 }
 
 .color-white {

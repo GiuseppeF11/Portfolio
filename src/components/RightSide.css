@@ -1,0 +1,17 @@
+/* RIGHTSIDE */
+.right-side {
+    a {
+        color: aliceblue;
+        font-weight: 700;
+        transition: 0.1s linear;
+        &:hover {
+            color: #54D3D4;
+        }
+    }
+}
+
+.introduction {
+    p {
+        margin-bottom: 20px;
+    }
+}

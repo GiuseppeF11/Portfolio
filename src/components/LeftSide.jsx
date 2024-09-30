@@ -31,10 +31,10 @@ function LeftSide() {
 
 
           <div className="flex sites">
-            <a href="" className="mx-5"><FaGithub /></a>
-            <a href="" className="mx-5"><FaLinkedin /></a>
-            <a href="" className="mx-5"><SiCodewars /></a>
-            <a href="" className="mx-5"><FaInstagram /></a>
+            <a href="" className="me-10"><FaGithub /></a>
+            <a href="" className="me-10"><FaLinkedin /></a>
+            <a href="" className="me-10"><SiCodewars /></a>
+            <a href="" className="me-10"><FaInstagram /></a>
           </div>
         </section>
         
