@@ -16,40 +16,6 @@
     margin-bottom: 20px;
 }
 
-.routes-list {
-
-    .route, .line {
-        transition: 0.2s ease-in-out;
-    }
-    
-    
-    .route{
-        margin-bottom: 30px;
-        color: #9ca3af;
-        cursor: pointer;
-        font-size: 15px;
-        font-family: monospace;
-        font-weight: 600;
-        &:hover {
-            color: aliceblue;
-            .line {
-                width: 80px;
-                background-color: aliceblue;
-            }
-        }
-    }
-
-
-
-    .line {
-        width: 30px;
-        height: 3px;
-        background-color: #9ca3af;
-        margin-right: 20px;
-   }
-
-}
-
 
 .sites {
     font-size: 25px;

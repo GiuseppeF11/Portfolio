@@ -1,8 +1,30 @@
 /* RIGHTSIDE */
-.right-side {
-    a {
+.about a {
         color: aliceblue;
-        font-weight: 700;
+        font-weight: 600;
+        transition: 0.1s linear;
+        &:hover {
+            color: #54D3D4;
+        }
+}
+
+/* ABOUT */
+
+.about {
+    margin-bottom: 100px;
+
+    p {
+        margin-bottom: 20px;
+    }
+}
+
+/* EXPERIENCES */
+
+.experiences , .projects {
+
+    .link {
+        color: aliceblue;
+        font-weight: 600;
         transition: 0.1s linear;
         &:hover {
             color: #54D3D4;
@@ -10,14 +32,6 @@
     }
 }
 
-.introduction {
-    margin-bottom: 80px;
-    p {
-        margin-bottom: 20px;
-    }
-}
-
-/* EXPERIENCES */
 
 .card {
     cursor: pointer;
@@ -31,37 +45,34 @@
         .title {
             color: #53CED0;
         }
+
+        img {
+            border: 1px solid aliceblue;
+        }
     }
 
     .title {
         transition: 0.3s linear;
     }
+}
+
+
+.view-more {
+    display: inline-block;
     
-
-
-}
-
-
-.line {
-    margin: 0 5px;
-    height: 0.5px;
-    width: 20px;
-    background-color: aliceblue;
-}
-
-.categories {
-    .badge {
-        background-color: #183756;
-        color: #53CED0;
-        padding: 5px 15px;
-        border-radius: 15px;
+    .text {
+        border-bottom: 1px solid #183756;
+        transition: 0.3s linear;
     }
-}
-
-.documentations {
-    a {
-        height: 20px;
-        display: flex;
-        align-items: center;
+    
+    &:hover {
+        .text {
+            border-bottom: 1px solid #53CED0;
+        }
+        
+        .icon{
+            transition: 0.1s linear;
+            transform: translate(5px, 0px);
+        }
     }
 }
