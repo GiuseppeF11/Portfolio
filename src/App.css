@@ -5,5 +5,5 @@
 }
 
 .right-side {
-    height: 200vh;
+    min-height: 200vh;
 }

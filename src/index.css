@@ -8,11 +8,13 @@
   padding: 0;
   box-sizing: border-box;
   letter-spacing: 2px;
+  scroll-behavior: smooth;
 }
 
 body {
   background: radial-gradient(circle at var(--gradient-position-x) var(--gradient-position-y), rgba(17, 32, 68, 0.633), transparent 40%), var(--background-color);
   transition: background 0.1s ease-out;
+  
 }
 
 :root {

@@ -10,7 +10,7 @@ function LeftSide() {
 
     return (
       <>
-        <section className="container">
+        <section className="container pt-20">
           <div className="tracking-wider">
               <h1 className="name">Giuseppe Failla</h1>
               <p className="role color-water">Junior Frontend Developer</p>
@@ -18,10 +18,10 @@ function LeftSide() {
           </div>
 
           <nav className="routes-list">
-            <a href="#" className="route flex items-center">
+            <a href="#about" className="route flex items-center">
               <div className="line"></div> <span>ABOUT</span>
             </a>
-            <a href="#" className="route flex items-center">
+            <a href="#experience" className="route flex items-center">
               <div className="line"></div> <span>EXPERIENCE</span>
             </a>
             <a href="#" className="route flex items-center">

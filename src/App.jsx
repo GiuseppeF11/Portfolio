@@ -26,8 +26,8 @@ function App() {
 
   return (
     <>
-      <div className="w-3/4 m-auto App">
-        <div className="grid grid-cols-2 gap-2">
+      <div className="w-3/4 m-auto">
+        <div className="grid grid-cols-2 gap-2 ">
           <div className="left-side">
             <LeftSide />
           </div>
