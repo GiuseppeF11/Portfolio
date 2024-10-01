@@ -3,6 +3,9 @@ import { FaLink } from "react-icons/fa6";
 import './Experiences.css';
 import { FaArrowUpLong } from "react-icons/fa6";
 import { TbCertificate } from "react-icons/tb";
+import Boolean_Certificate from "../assets/documents/Certificato Boolean.jpg"
+import HDI_Certificate from "../assets/documents/HDI.jpeg"
+import Diploma from "../assets/documents/Diploma.jpg"
 
 const Experiences = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -19,7 +22,7 @@ const Experiences = () => {
         { 
           icon: <TbCertificate />,
           name: 'Certificato', 
-          url: '/public/image/documents/Certificato Boolean.jpg' 
+          url: Boolean_Certificate
         }
       ],
       categories: ["HTML","CSS","JavaScript","Laravel","Vue.js","PHP", "MySQL"]
@@ -35,7 +38,7 @@ const Experiences = () => {
         { 
           icon: <TbCertificate />,
           name: 'Certificato', 
-          url: '/public/image/documents/HDI.jpeg' 
+          url: HDI_Certificate 
         }
       ],
       categories: ["Consulenza", "Vendita", "Time Management", "Problem Solving"]
@@ -71,7 +74,7 @@ const Experiences = () => {
         { 
           icon: <TbCertificate />,
           name: 'Certificato', 
-          url: '/public/image/documents/Diploma.jpg' 
+          url: Diploma 
         }
       ],
       categories: ["First Aid", "CPR", "BLS", "Driving Skills","Stress Management"]
