@@ -41,10 +41,10 @@ function Projects() {
     },
     {
       date: '2024',
-      name: Myflix,
+      name: 'Myflix',
       description: "Sito per consultare la più vasta libreria cinematografica, visualizzare i rispettivi trailer e creare una lista preferiti",
       link: 'https://github.com/GiuseppeF11/myflix',
-      image: '/public/image/projects/Myflix.png',
+      image: Myflix,
       documentations: [
         { name: 'The Movie DB', url: 'https://www.themoviedb.org/' },
         { name: 'Swiper', url: 'https://swiperjs.com/' },
@@ -55,10 +55,10 @@ function Projects() {
     },
     {
       date: '2024',
-      name: CurrencyConverter,
+      name: 'Currency Converter',
       description: "Web-App per eseguire la conversione delle valute sfruttando i dati forniti dalla Banca Centrale Europea",
       link: 'https://github.com/GiuseppeF11/currency-converter',
-      image: '/public/image/projects/Currency Converter.png',
+      image: CurrencyConverter,
       documentations: [
         { name: 'Frankfurter', url: 'https://frankfurter.dev/' },
         { name: 'Bootstrap', url: 'https://getbootstrap.com/' },
@@ -68,10 +68,10 @@ function Projects() {
     },
     {
       date: '2024',
-      name: Fastbites,
+      name: 'Fastbites',
       description: "App di food-delivery ideata per consumatori e ristoratori",
       link: 'https://github.com/alessiopalmieri001/Fast-Bites-Backend-Bf',
-      image: '/public/image/projects/Fastbites.png',
+      image: Fastbites,
       documentations: [
         { name: 'Braintree', url: 'https://www.braintreepayments.com/fr' },
         { name: 'Bootstrap', url: 'https://getbootstrap.com/' },
@@ -81,10 +81,10 @@ function Projects() {
     },
     {
       date: '2024',
-      name: Spotify,
+      name: 'Spotify',
       description: "Emulazione della celebre app per la riproduzione musicale",
       link: 'https://github.com/GiuseppeF11/html-css-spotifyweb',
-      image: '/public/image/projects/Spotify.png',
+      image: Spotify,
       documentations: [],
       categories: ['HTML', 'CSS']
     },
