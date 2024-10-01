@@ -47,7 +47,7 @@ const About = () => {
         </p>
       ))}
 
-      <h1 className='text-white font-bold text-lg my-5'>Stack Tecnologico</h1>
+      <h1 className='text-white font-bold text-lg my-5'>Competenze e Strumenti</h1>
       <div className="flex flex-wrap text-center gap-3">
         {tecnologies.map((category, i) => (
           <span className="badge whitespace-nowrap text-xs" key={i}>{category}</span>

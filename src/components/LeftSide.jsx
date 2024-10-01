@@ -15,7 +15,7 @@ function LeftSide() {
           <div className="tracking-wider">
               <h1 className="name">Giuseppe Failla</h1>
               <p className="role color-water">Junior Frontend Developer</p>
-              <p className=" w-1/2 color-gray ">testo o frase ad effetto da inserire per sembrare acculturato e ricercato bla bla bla</p>
+              <p className=" w-3/4 color-gray ">Costruisco soluzioni digitali efficienti e scalabili, trasformando problemi complessi in codice chiaro e funzionale</p>
           </div>
 
           <Navbar></Navbar>
