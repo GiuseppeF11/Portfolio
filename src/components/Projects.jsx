@@ -10,67 +10,76 @@ function Projects() {
     {
       date: '2024',
       name: 'Portfolio',
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nesciunt tempore facilis ut, totam quas distinctio, aliquam quae dicta necessitatibus expedita sint velit voluptatem molestiae id perspiciatis soluta illum nemo?",
+      description: "Un sito portfolio per presentarmi con le mie esperienze ed alcuni dei miei progetti. ",
       link: 'https://github.com/GiuseppeF11/Portfolio',
       image: '/public/image/projects/Portfolio.png',
       documentations: [
-        { name: 'The Movie DB', url: '#' }
+        { name: 'React Icons', url: 'https://react-icons.github.io/react-icons/' },
+        { name: 'Tailwind', url: 'https://tailwindcss.com/' },
       ],
       categories: ['React.js']
     },
     {
       date: '2024',
       name: 'Meridiano',
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nesciunt tempore facilis ut, totam quas distinctio, aliquam quae dicta necessitatibus expedita sint velit voluptatem molestiae id perspiciatis soluta illum nemo?",
+      description: "App per pianificare ed organizzare viaggi, rivivere avventure passate a sfogliare gli album dei ricordi",
       link: 'https://github.com/GiuseppeF11/travel-app',
       image: '/public/image/projects/Meridiano.png',
       documentations: [
-        { name: 'The Movie DB', url: '#' }
+        { name: 'Swiper', url: 'https://swiperjs.com/' },
+        { name: 'AOS.js', url: 'https://michalsnik.github.io/aos/' },
+        { name: 'Bootstrap', url: 'https://getbootstrap.com/' },
+        { name: 'FontAwesome', url: 'https://fontawesome.com/' },
       ],
-      categories: ['Laravel']
+      categories: ['Laravel','Blade']
     },
     {
       date: '2024',
       name: 'Myflix',
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nesciunt tempore facilis ut, totam quas distinctio, aliquam quae dicta necessitatibus expedita sint velit voluptatem molestiae id perspiciatis soluta illum nemo?",
+      description: "Sito per consultare la più vasta libreria cinematografica, visualizzare i rispettivi trailer e creare una lista preferiti",
       link: 'https://github.com/GiuseppeF11/myflix',
       image: '/public/image/projects/Myflix.png',
       documentations: [
-        { name: 'The Movie DB', url: '#' }
+        { name: 'The Movie DB', url: 'https://www.themoviedb.org/' },
+        { name: 'Swiper', url: 'https://swiperjs.com/' },
+        { name: 'Bootstrap', url: 'https://getbootstrap.com/' },
+        { name: 'FontAwesome', url: 'https://fontawesome.com/' },
       ],
-      categories: ['Vue.js']
+      categories: ['Vue.js','HTML','CSS','JavaScript']
     },
     {
       date: '2024',
       name: 'Currency Converter',
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nesciunt tempore facilis ut, totam quas distinctio, aliquam quae dicta necessitatibus expedita sint velit voluptatem molestiae id perspiciatis soluta illum nemo?",
+      description: "Web-App per eseguire la conversione delle valute sfruttando i dati forniti dalla Banca Centrale Europea",
       link: 'https://github.com/GiuseppeF11/currency-converter',
       image: '/public/image/projects/Currency Converter.png',
       documentations: [
-        { name: 'The Movie DB', url: '#' }
+        { name: 'Frankfurter', url: 'https://frankfurter.dev/' },
+        { name: 'Bootstrap', url: 'https://getbootstrap.com/' },
+        { name: 'FontAwesome', url: 'https://fontawesome.com/' },
       ],
-      categories: ['Vue.js']
+      categories: ['Vue.js','HTML','CSS','JavaScript']
     },
     {
       date: '2024',
       name: 'Fastbites',
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nesciunt tempore facilis ut, totam quas distinctio, aliquam quae dicta necessitatibus expedita sint velit voluptatem molestiae id perspiciatis soluta illum nemo?",
+      description: "App di food-delivery ideata per consumatori e ristoratori",
       link: 'https://github.com/alessiopalmieri001/Fast-Bites-Backend-Bf',
       image: '/public/image/projects/Fastbites.png',
       documentations: [
-        { name: 'The Movie DB', url: '#' }
+        { name: 'Braintree', url: 'https://www.braintreepayments.com/fr' },
+        { name: 'Bootstrap', url: 'https://getbootstrap.com/' },
+        { name: 'FontAwesome', url: 'https://fontawesome.com/' },
       ],
       categories: ['Vue.js', 'Laravel']
     },
     {
       date: '2024',
       name: 'Spotify',
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nesciunt tempore facilis ut, totam quas distinctio, aliquam quae dicta necessitatibus expedita sint velit voluptatem molestiae id perspiciatis soluta illum nemo?",
+      description: "Emulazione della celebre app per la riproduzione musicale",
       link: 'https://github.com/GiuseppeF11/html-css-spotifyweb',
       image: '/public/image/projects/Spotify.png',
-      documentations: [
-        { name: 'The Movie DB', url: '#' }
-      ],
+      documentations: [],
       categories: ['HTML', 'CSS']
     },
   ];
@@ -79,6 +88,7 @@ function Projects() {
     <>
       {projects.map((project, index) => (
         <a
+            target="blank" 
             href={project.link}
             key={index}
             className={`project card grid grid-flow-col gap-5 my-5 p-8 transition-all duration-300 ${
@@ -97,7 +107,7 @@ function Projects() {
             <p className='text-sm mb-3'>{project.description}</p>
             <div className="documentations flex flex-wrap text-center gap-3 mb-3">
               {project.documentations.map((doc, i) => (
-                <a href={doc.url} className="link whitespace-nowrap text-sm flex items-center gap-2" key={i}>
+                <a target="blank"  href={doc.url} className="link whitespace-nowrap text-sm flex items-center gap-2" key={i}>
                   <FaLink /> {doc.name}
                 </a>
               ))}

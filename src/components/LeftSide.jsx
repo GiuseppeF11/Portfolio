@@ -22,10 +22,10 @@ function LeftSide() {
 
 
           <div className="flex sites">
-            <a href="" className="me-10"><FaGithub /></a>
-            <a href="" className="me-10"><FaLinkedin /></a>
-            <a href="" className="me-10"><SiCodewars /></a>
-            <a href="" className="me-10"><FaInstagram /></a>
+            <a target="blank" href="https://github.com/GiuseppeF11" className="me-10"><FaGithub /></a>
+            <a target="blank"  href="https://www.linkedin.com/in/giuseppe-failla-96a759194/" className="me-10"><FaLinkedin /></a>
+            <a target="blank"  href="https://www.codewars.com/users/GiuseppeF11" className="me-10"><SiCodewars /></a>
+            <a target="blank"  href="https://www.instagram.com/giuseppefailla00/" className="me-10"><FaInstagram /></a>
           </div>
         </section>
         
