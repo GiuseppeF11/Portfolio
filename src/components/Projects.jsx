@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import './Projects.css'
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { FaLink } from "react-icons/fa6";
+import CurrencyConverter from "../assets/projects/Currency Converter.png";
+import Fastbites from "../assets/projects/Fastbites.png";
+import Meridiano from "../assets/projects/Meridiano.png";
+import Portfolio from "../assets/projects/Portfolio.png";
+import Spotify from "../assets/projects/Spotify.png";
+import Myflix from "../assets/projects/Myflix.png";
 
 function Projects() {
     const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -12,7 +18,7 @@ function Projects() {
       name: 'Portfolio',
       description: "Un sito portfolio per presentarmi con le mie esperienze ed alcuni dei miei progetti. ",
       link: 'https://github.com/GiuseppeF11/Portfolio',
-      image: '/public/image/projects/Portfolio.png',
+      image: Portfolio,
       documentations: [
         { name: 'React Icons', url: 'https://react-icons.github.io/react-icons/' },
         { name: 'Tailwind', url: 'https://tailwindcss.com/' },
@@ -24,7 +30,7 @@ function Projects() {
       name: 'Meridiano',
       description: "App per pianificare ed organizzare viaggi, rivivere avventure passate a sfogliare gli album dei ricordi",
       link: 'https://github.com/GiuseppeF11/travel-app',
-      image: '/public/image/projects/Meridiano.png',
+      image: Meridiano,
       documentations: [
         { name: 'Swiper', url: 'https://swiperjs.com/' },
         { name: 'AOS.js', url: 'https://michalsnik.github.io/aos/' },
@@ -35,7 +41,7 @@ function Projects() {
     },
     {
       date: '2024',
-      name: 'Myflix',
+      name: Myflix,
       description: "Sito per consultare la più vasta libreria cinematografica, visualizzare i rispettivi trailer e creare una lista preferiti",
       link: 'https://github.com/GiuseppeF11/myflix',
       image: '/public/image/projects/Myflix.png',
@@ -49,7 +55,7 @@ function Projects() {
     },
     {
       date: '2024',
-      name: 'Currency Converter',
+      name: CurrencyConverter,
       description: "Web-App per eseguire la conversione delle valute sfruttando i dati forniti dalla Banca Centrale Europea",
       link: 'https://github.com/GiuseppeF11/currency-converter',
       image: '/public/image/projects/Currency Converter.png',
@@ -62,7 +68,7 @@ function Projects() {
     },
     {
       date: '2024',
-      name: 'Fastbites',
+      name: Fastbites,
       description: "App di food-delivery ideata per consumatori e ristoratori",
       link: 'https://github.com/alessiopalmieri001/Fast-Bites-Backend-Bf',
       image: '/public/image/projects/Fastbites.png',
@@ -75,7 +81,7 @@ function Projects() {
     },
     {
       date: '2024',
-      name: 'Spotify',
+      name: Spotify,
       description: "Emulazione della celebre app per la riproduzione musicale",
       link: 'https://github.com/GiuseppeF11/html-css-spotifyweb',
       image: '/public/image/projects/Spotify.png',
