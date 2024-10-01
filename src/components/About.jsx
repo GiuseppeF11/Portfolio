@@ -1,28 +1,60 @@
-import React, { PureComponent } from 'react'
+import React from 'react';
+import './About.css';
 
-export class About extends PureComponent {
-  render() {
-    return (
-        <>
-                <p>
-                  Adolescenza (scuola, passioni, esperienze e aneddoti)
+const About = () => {
+  const abouts = [
+    {
+      text: "Nato a Catania il 10 dicembre 2000, sono sempre stato incuriosito dal funzionamento delle cose. Smontavo tutto ciò che mi capitava per mano, e questa spinta mi ha portato a sviluppare una grande passione per la tecnologia .",
+      links: [
+        {word: "Catania", url: "#"},
+        {word: "tecnologia", url: "#"}
+      ]
+    },
+    {
+      text: "Sono appassionato di sports ed e-sports , suono la chitarra, nel weekend mi piace praticare trekking , trascorrere del tempo nella natura o fare delle escursioni in moto.",
+      links: [
+        {word: "sports", url: "#"},
+        {word: "e-sports", url: "#"},
+        {word: "trekking", url: "#"},
+      ] 
+    },
+    {
+      text: "Dall'ottobre del 2023 ad oggi mi occupo di web-development . Sono un full-stack developer ma prediligo il frontend in quanto mi consente di dare libero sfogo alla mia creatività.",
+      links: [
+        { word: "web-development", url: "#" },
+        { word: "full-stack", url: "#" },
+        { word: "frontend", url: "#" }
+      ]
+    }
+  ];
 
-                  Back in <a href="#">2012</a>, I decided to try my hand at creating custom Tumblr themes and tumbled head first into the rabbit hole of coding and web development. <a href="#">Fast-forward</a> to today, and I’ve had the privilege of building software for an advertising agency, a start-up, a huge corporation, and a digital product studio.
-                </p>
-                
-                <p>
-                  esperienze cruciali e formazione che mi ha portato alle attuali scelte
-                  Back in 2012, I decided to try my hand at creating custom <a href="#">Tumblr</a> themes and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and I’ve had the privilege of building software for an advertising agency, a start-up, a huge corporation, and a digital product studio.
-                </p>
-                
-                <p>
-                  tutto ciò che riguarda la mia esperienza nell'ambito tecnologico
-                  Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled head first into the rabbit hole of <a href="#">coding and web development</a>. Fast-forward to today, and I’ve had the privilege of building software for an advertising agency, a start-up, a huge corporation, and a digital product studio.
-                </p>
-        </>
-                
-    )
-  }
-}
+  const tecnologies = [
+    'HTML', 'CSS', 'JavaScript', 'PHP', 'SQL', 'Vue.js', 'React.js', 'SASS', 'Laravel', 'MySQL', 'GIT', 'Tailwind', 'Bootstrap',
+  ];
 
-export default About
+  return (
+    <>
+      {abouts.map((about, i) => (
+        <p key={i}>
+          {about.text.split(' ').map((word, j) => {
+            const link = about.links.find(link => link.word === word);
+            return link ? (
+              <a key={j}> {word} </a>
+            ) : (
+              <span key={j}>{word} </span>
+            );
+          })}
+        </p>
+      ))}
+
+      <h1 className='text-white font-bold text-lg my-5'>Stack Tecnologico</h1>
+      <div className="flex flex-wrap text-center gap-3">
+        {tecnologies.map((category, i) => (
+          <span className="badge whitespace-nowrap text-xs" key={i}>{category}</span>
+        ))}
+      </div>
+    </>
+  );
+};
+
+export default About;

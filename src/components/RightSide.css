@@ -1,11 +1,19 @@
 /* RIGHTSIDE */
 .about a {
+    cursor: pointer;
         color: aliceblue;
         font-weight: 600;
         transition: 0.1s linear;
         &:hover {
             color: #54D3D4;
         }
+}
+
+.badge {
+    background-color: #183756;
+    color: #53CED0;
+    padding: 5px 15px;
+    border-radius: 15px;
 }
 
 /* ABOUT */
