@@ -1,9 +1,7 @@
-.left-side {
+/* .left-side {
     height: 100vh;
-    position: sticky;
-    top: 0;
 }
-
+ */
 .right-side {
-    min-height: 200vh;
+    min-height: 100vh;
 }

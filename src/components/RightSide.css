@@ -1,4 +1,23 @@
 /* RIGHTSIDE */
+.sticky {
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .right-side h1 {
+    background-color: rgba(15, 23, 42, 0);
+    padding: 10px 0;
+    margin: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-size: 20px;
+    border-radius: 5px;
+  }
+  
+
+
 .about a {
     cursor: pointer;
         color: aliceblue;
@@ -46,23 +65,27 @@
     transition: 0.3s linear;
     border: 1px solid #183756;
     border-radius: 15px;
-    &:hover {
+}
+
+.card .title {
+    transition: 0.3s linear;
+}
+
+@media (min-width: 1024px) {
+    .card:hover {
         border: 1px solid aliceblue;
         transform: scale(1.01);
-
-        .title {
-            color: #53CED0;
-        }
-
-        img {
-            border: 1px solid aliceblue;
-        }
     }
 
-    .title {
-        transition: 0.3s linear;
+    .card:hover .title {
+        color: #53CED0;
+    }
+
+    .card:hover img {
+        border: 1px solid aliceblue;
     }
 }
+
 
 
 .view-more {

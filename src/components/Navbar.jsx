@@ -46,7 +46,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="routes-list">
+    <nav className="routes-list max-lg:hidden">
       {sections.map((section) => (
         <a 
           key={section.id} 

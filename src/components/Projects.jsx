@@ -103,7 +103,7 @@ function Projects() {
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
         >
-          <div className="col-span-2 pt-2">
+          <div className="col-span-3 pt-2 max-xl:hidden h-28">
             <img src={project.image} alt={project.name} />
           </div>
           <div className='col-span-4'>
@@ -118,12 +118,19 @@ function Projects() {
                 </a>
               ))}
             </div>
-            <div className="categories flex flex-wrap text-center gap-3">
+            <div className="categories flex flex-wrap text-center gap-3 my-5">
               {project.categories.map((category, i) => (
                 <span className="badge whitespace-nowrap text-xs" key={i}>{category}</span>
               ))}
             </div>
+
+            <div className="col-span-2 pt-2 h-40 xl:hidden">
+                <img src={project.image} alt={project.name} />
+            </div>
           </div>
+
+          
+          
         </a>
       ))}
     </>

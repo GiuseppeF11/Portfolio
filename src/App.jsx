@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import RightSide from './components/RightSide.jsx';
 import LeftSide from './components/LeftSide.jsx';
+import Social from "./components/Social.jsx";
 import './App.css';
 
 function App() {
@@ -27,12 +28,16 @@ function App() {
   return (
     <>
       <div className="w-3/4 m-auto">
-        <div className="grid grid-cols-2 gap-2 ">
-          <div className="left-side">
+        <div className="grid lg:grid-cols-2  gap-5">
+          <div className="left-side lg:h-screen lg:sticky lg:top-0">
             <LeftSide />
           </div>
           <div className="right-side ">
-            <RightSide />
+            <RightSide/>
+          </div>
+
+          <div className="flex justify-between sites text-5xl mb-10 lg:hidden">
+            <Social></Social>
           </div>
         </div>
       </div>
