@@ -36,7 +36,7 @@ function App() {
             <RightSide/>
           </div>
 
-          <div className="flex justify-between sites text-5xl mb-10 lg:hidden">
+          <div className="flex justify-between sites sm:max-md:text-3xl md:max-lg:text-5xl mb-10 lg:hidden">
             <Social></Social>
           </div>
         </div>
