@@ -77,7 +77,7 @@ const Experiences = () => {
           url: Diploma 
         }
       ],
-      categories: ["First Aid", "CPR", "BLS", "Driving Skills","Stress Management"]
+      categories: []
     }
   ];
 
