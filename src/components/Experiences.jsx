@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaLink } from "react-icons/fa6";
 import './Experiences.css';
 import { FaArrowUpLong } from "react-icons/fa6";
@@ -9,6 +9,17 @@ import Diploma from "../assets/documents/Diploma.jpg"
 
 const Experiences = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+  
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(pointer: fine)');
+    setIsDesktop(mediaQuery.matches);
+
+    const handleChange = (e) => setIsDesktop(e.matches);
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
 
   const experiences = [
     {
@@ -99,14 +110,14 @@ const Experiences = () => {
       {sortedExperiences.map((experience, index) => (
         <a
         target='blank'
-          href={experience.url}
-          key={index}
-          className={`card grid grid-flow-col gap-5 my-5 p-8 transition-all duration-300 ${
-            hoveredIndex !== null && hoveredIndex !== index ? 'brightness-50' : 'https://github.com/GiuseppeF11/myflix'
-          }`}
-          onMouseEnter={() => setHoveredIndex(index)}
-          onMouseLeave={() => setHoveredIndex(null)}
-        >
+        href={experience.url}
+        key={index}
+        className={`card grid grid-flow-col gap-5 my-5 p-8 transition-all duration-300 ${
+          isDesktop && hoveredIndex !== null && hoveredIndex !== index ? 'brightness-50' : ''
+        }`}
+        onMouseEnter={() => setHoveredIndex(index)}
+        onMouseLeave={() => setHoveredIndex(null)}
+      >
           {<div className="date font-semibold h-10 text-gray-500  flex items-center justify-start overflow-hidden max-xl:hidden ">
             {experience.start}
         

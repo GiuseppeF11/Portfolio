@@ -6,24 +6,30 @@ import './App.css';
 
 function App() {
   useEffect(() => {
+    // Controlla se il dispositivo corrente è un PC (con puntatore preciso)
+    const isDesktop = window.matchMedia('(pointer: fine)').matches;
+  
+    if (!isDesktop) return;
+  
     const handleMouseMove = (e) => {
       // Considera lo scroll della pagina per avere le coordinate corrette
-      const x = e.clientX + window.scrollX; 
+      const x = e.clientX + window.scrollX;
       const y = e.clientY + window.scrollY;
-
+  
       // Imposta la posizione del gradiente direttamente in pixel
       document.documentElement.style.setProperty('--gradient-position-x', `${x}px`);
       document.documentElement.style.setProperty('--gradient-position-y', `${y}px`);
     };
-
+  
     // Aggiungi l'evento di movimento del mouse
     window.addEventListener('mousemove', handleMouseMove);
-
+  
     // Rimuovi l'evento al momento dello smontaggio del componente
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
+  
 
   return (
     <>

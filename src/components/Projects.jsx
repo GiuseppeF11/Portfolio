@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Projects.css'
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { FaLink } from "react-icons/fa6";
@@ -10,7 +10,18 @@ import Spotify from "../assets/projects/Spotify.png";
 import Myflix from "../assets/projects/Myflix.png";
 
 function Projects() {
-    const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(pointer: fine)');
+    setIsDesktop(mediaQuery.matches);
+
+    const handleChange = (e) => setIsDesktop(e.matches);
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
 
   const projects = [
     {
@@ -98,7 +109,7 @@ function Projects() {
             href={project.link}
             key={index}
             className={`project card grid grid-flow-col gap-5 my-5 p-8 transition-all duration-300 ${
-            hoveredIndex !== null && hoveredIndex !== index ? 'brightness-50' : ''
+            isDesktop && hoveredIndex !== null && hoveredIndex !== index ? 'brightness-50' : ''
             }`}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
