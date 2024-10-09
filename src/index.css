@@ -11,6 +11,12 @@
   scroll-behavior: smooth;
 }
 
+@media screen and (max-width:768px)  {
+  * {
+    text-align: center;
+  }
+}
+
 body {
   background: radial-gradient(circle at var(--gradient-position-x) var(--gradient-position-y), rgba(32, 55, 107, 0.633), transparent 20%), var(--background-color);
   transition: background 0.1s ease-out;
@@ -24,6 +30,8 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+/* PALETTE */
+
 .color-white {
   color: aliceblue;
 }
@@ -34,4 +42,34 @@ body {
 
 .color-water{
   color: #52CED0;
+}
+
+/* SCROLLBAR */
+
+body {
+  --sb-track-color: #0f172a;
+  --sb-thumb-color: #52ced0;
+  --sb-size: 7px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+  
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
 }

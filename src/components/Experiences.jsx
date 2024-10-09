@@ -118,7 +118,7 @@ const Experiences = () => {
         onMouseEnter={() => setHoveredIndex(index)}
         onMouseLeave={() => setHoveredIndex(null)}
       >
-          {<div className="date font-semibold h-10 text-gray-500  flex items-center justify-start overflow-hidden max-xl:hidden ">
+          {<div className="date w-40 font-semibold h-10 text-gray-500  flex items-center max-md:justify-center lg:justify-start overflow-hidden max-xl:hidden ">
             {experience.start}
         
             <span className="line bg-gray-500"></span>
@@ -133,7 +133,7 @@ const Experiences = () => {
             
             <h5 className='text-sm font-semibold text-gray-400 lg:mb-5'>{experience.agency}</h5>
 
-            {<div className="date font-semibold h-10 text-gray-500  flex items-center justify-start overflow-hidden mb-4 xl:hidden">
+            {<div className="date font-semibold h-10 text-gray-500  flex items-center max-md:justify-center lg:justify-start overflow-hidden mb-4 xl:hidden">
               {experience.start}
           
               <span className="line bg-gray-500"></span>
@@ -143,14 +143,14 @@ const Experiences = () => {
               
     
             <p className="text-sm mb-3">{experience.details}</p>
-            <div className="documentations flex flex-wrap text-center gap-3 mb-3">
+            <div className="documentations flex flex-wrap text-center gap-3 mb-3 max-md:justify-center">
               {experience.documentations.map((doc, i) => (
                 <a target='blank' href={doc.url} className="link whitespace-nowrap text-sm flex items-center gap-2" key={i}>
                   {doc.icon}  {doc.name}
                 </a>
               ))}
             </div>
-            <div className="categories flex flex-wrap text-center gap-3">
+            <div className="categories flex flex-wrap text-center gap-3 max-md:justify-center">
               {experience.categories.map((category, i) => (
                 <span className="badge whitespace-nowrap text-xs" key={i}>{category}</span>
               ))}

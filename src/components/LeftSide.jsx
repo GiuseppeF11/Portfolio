@@ -13,7 +13,7 @@ function LeftSide() {
           <div className="tracking-wider">
               <h1 className="max-lg:text-4xl lg:text-5xl font-bold mb-3">Giuseppe Failla</h1>
               <p className="role color-water">Junior Frontend Developer</p>
-              <p className=" w-3/4 color-gray mb-5">Creo soluzioni digitali, trasformando problemi complessi in codice chiaro e funzionale.</p>
+              <p className=" md:w-3/4 color-gray mb-5">Creo soluzioni digitali, trasformando problemi complessi in codice chiaro e funzionale.</p>
           </div>
 
           <Navbar></Navbar>

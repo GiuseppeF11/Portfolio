@@ -34,21 +34,23 @@ const About = () => {
 
   return (
     <>
-      {abouts.map((about, i) => (
-        <p key={i}>
-          {about.text.split(' ').map((word, j) => {
-            const link = about.links.find(link => link.word === word);
-            return link ? (
-              <a key={j}> {word} </a>
-            ) : (
-              <span key={j}>{word} </span>
-            );
-          })}
-        </p>
-      ))}
+      <div className='mb-10'>
+        {abouts.map((about, i) => (
+          <p key={i}>
+            {about.text.split(' ').map((word, j) => {
+              const link = about.links.find(link => link.word === word);
+              return link ? (
+                <a key={j}> {word} </a>
+              ) : (
+                <span key={j}>{word} </span>
+              );
+            })}
+          </p>
+        ))}
+      </div>
 
       <h2 className='text-white font-bold text-lg my-5'>Competenze e Strumenti</h2>
-      <div className="flex flex-wrap text-center gap-3">
+      <div className="flex flex-wrap text-center gap-3 max-md:justify-center">
         {tecnologies.map((category, i) => (
           <span className="badge whitespace-nowrap text-xs" key={i}>{category}</span>
         ))}

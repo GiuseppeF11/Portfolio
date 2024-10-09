@@ -118,24 +118,24 @@ function Projects() {
             <img src={project.image} alt={project.name} />
           </div>
           <div className='col-span-4'>
-            <h3 className="title color-white text-lg font-bold h-10 flex items-center mb-1 gap-1">
+            <h3 className="title color-white text-lg font-bold h-10 flex items-center mb-1 gap-1 max-md:justify-center lg:justify-start">
               {project.name.length > 30 ? `${project.name.slice(0, 30)}...` : project.name} <span className='text-sm icon'><MdOutlineArrowOutward /></span>
             </h3>
             <p className='text-sm mb-3'>{project.description}</p>
-            <div className="documentations flex flex-wrap text-center gap-3 mb-3">
+            <div className="documentations flex flex-wrap text-center gap-3 mb-3 max-md:justify-center lg:justify-start">
               {project.documentations.map((doc, i) => (
                 <a target="blank"  href={doc.url} className="link whitespace-nowrap text-sm flex items-center gap-2" key={i}>
                   <FaLink /> {doc.name}
                 </a>
               ))}
             </div>
-            <div className="categories flex flex-wrap text-center gap-3 my-5">
+            <div className="categories flex flex-wrap text-center gap-3 my-5 max-md:justify-center lg:justify-start">
               {project.categories.map((category, i) => (
                 <span className="badge whitespace-nowrap text-xs" key={i}>{category}</span>
               ))}
             </div>
 
-            <div className="col-span-2 pt-2 h-40 xl:hidden">
+            <div className="col-span-2 pt-2 h-40 xl:hidden flex max-md:justify-center lg:justify-start">
                 <img src={project.image} alt={project.name} />
             </div>
           </div>

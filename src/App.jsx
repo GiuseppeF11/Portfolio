@@ -2,10 +2,13 @@ import { useEffect } from 'react';
 import RightSide from './components/RightSide.jsx';
 import LeftSide from './components/LeftSide.jsx';
 import Social from "./components/Social.jsx";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './App.css';
 
 function App() {
   useEffect(() => {
+    
     // Controlla se il dispositivo corrente è un PC (con puntatore preciso)
     const isDesktop = window.matchMedia('(pointer: fine)').matches;
   
