@@ -2,13 +2,11 @@ import { useEffect } from 'react';
 import RightSide from './components/RightSide.jsx';
 import LeftSide from './components/LeftSide.jsx';
 import Social from "./components/Social.jsx";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import './App.css';
 
 function App() {
   useEffect(() => {
-    
+
     // Controlla se il dispositivo corrente è un PC (con puntatore preciso)
     const isDesktop = window.matchMedia('(pointer: fine)').matches;
   
@@ -41,11 +39,11 @@ function App() {
           <div className="left-side lg:h-screen lg:sticky lg:top-0">
             <LeftSide />
           </div>
-          <div className="right-side ">
+          <div className="right-side">
             <RightSide/>
           </div>
 
-          <div className="flex justify-between sites sm:max-md:text-3xl md:max-lg:text-5xl mb-10 lg:hidden">
+          <div className="flex justify-between sites sm:max-md:text-3xl md:max-lg:text-5xl mb-28 lg:hidden">
             <Social></Social>
           </div>
         </div>

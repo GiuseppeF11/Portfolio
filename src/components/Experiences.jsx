@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { FaLink } from "react-icons/fa6";
 import './Experiences.css';
 import { FaArrowUpLong } from "react-icons/fa6";
@@ -12,6 +14,12 @@ const Experiences = () => {
   const [isDesktop, setIsDesktop] = useState(false);
   
   useEffect(() => {
+    AOS.init({
+      duration: 800, 
+      easing: 'ease-in-out', 
+      once: true, 
+    });
+
     const mediaQuery = window.matchMedia('(pointer: fine)');
     setIsDesktop(mediaQuery.matches);
 
@@ -36,6 +44,7 @@ const Experiences = () => {
           url: Boolean_Certificate
         }
       ],
+      aos: 'fade-up',
       categories: ["HTML","CSS","JavaScript","Laravel","Vue.js","PHP", "MySQL"]
     },
     {
@@ -52,6 +61,7 @@ const Experiences = () => {
           url: HDI_Certificate 
         }
       ],
+      aos: 'fade-up',
       categories: ["Consulenza", "Vendita", "Time Management", "Problem Solving"]
     },
     {
@@ -62,6 +72,7 @@ const Experiences = () => {
       agency: "Univeristà di Catania",
       details: "",
       documentations: [],
+      aos: 'fade-up',
       categories: ["Biologia Generale", "Genetica", "Economia Aziendale", "Inglese", "Informatica", "Matematica"]
     },
     {
@@ -72,6 +83,7 @@ const Experiences = () => {
       agency: "Misericordia San Leone",
       details: "Servizio come ambulanziere e trasporto disabili",
       documentations: [],
+      aos: 'fade-up',
       categories: ["First Aid", "CPR", "BLS", "Driving Skills","Stress Management"]
     },
     {
@@ -88,6 +100,7 @@ const Experiences = () => {
           url: Diploma 
         }
       ],
+      aos: 'fade-up',
       categories: []
     }
   ];
@@ -108,56 +121,48 @@ const Experiences = () => {
   return (
     <>
       {sortedExperiences.map((experience, index) => (
-        <a
-        target='blank'
-        href={experience.url}
-        key={index}
-        className={`card grid grid-flow-col gap-5 my-5 p-8 transition-all duration-300 ${
-          isDesktop && hoveredIndex !== null && hoveredIndex !== index ? 'brightness-50' : ''
-        }`}
-        onMouseEnter={() => setHoveredIndex(index)}
-        onMouseLeave={() => setHoveredIndex(null)}
-      >
-          {<div className="date w-40 font-semibold h-10 text-gray-500  flex items-center max-md:justify-center lg:justify-start overflow-hidden max-xl:hidden ">
-            {experience.start}
-        
-            <span className="line bg-gray-500"></span>
+        <div data-aos="fade-up" key={index}>
+          <a
+            target='blank'
+            href={experience.url}
+            className={`card grid grid-flow-col gap-5 my-5 p-8 transition-all duration-300 ${
+              isDesktop && hoveredIndex !== null && hoveredIndex !== index ? 'brightness-50' : ''
+            }`}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
 
-            {experience.end}  
-          </div>}
-
-          <div>
-            <h3 className="title text-lg font-bold">
-              {experience.title}
-            </h3>
-            
-            <h5 className='text-sm font-semibold text-gray-400 lg:mb-5'>{experience.agency}</h5>
-
-            {<div className="date font-semibold h-10 text-gray-500  flex items-center max-md:justify-center lg:justify-start overflow-hidden mb-4 xl:hidden">
+            <div className="date w-40 font-semibold h-10 text-gray-500 flex items-center max-md:justify-center lg:justify-start overflow-hidden max-xl:hidden ">
               {experience.start}
-          
               <span className="line bg-gray-500"></span>
-
-              {experience.end}  
-            </div>}
-              
-    
-            <p className="text-sm mb-3">{experience.details}</p>
-            <div className="documentations flex flex-wrap text-center gap-3 mb-3 max-md:justify-center">
-              {experience.documentations.map((doc, i) => (
-                <a target='blank' href={doc.url} className="link whitespace-nowrap text-sm flex items-center gap-2" key={i}>
-                  {doc.icon}  {doc.name}
-                </a>
-              ))}
+              {experience.end}
             </div>
-            <div className="categories flex flex-wrap text-center gap-3 max-md:justify-center">
-              {experience.categories.map((category, i) => (
-                <span className="badge whitespace-nowrap text-xs" key={i}>{category}</span>
-              ))}
+            <div>
+              <h3 className="title text-lg font-bold">{experience.title}</h3>
+              <h5 className='text-sm font-semibold text-gray-400 lg:mb-5'>{experience.agency}</h5>
+              <div className="date font-semibold h-10 text-gray-500 flex items-center max-md:justify-center lg:justify-start overflow-hidden mb-4 xl:hidden">
+                {experience.start}
+                <span className="line bg-gray-500"></span>
+                {experience.end}
+              </div>
+              <p className="text-sm mb-3">{experience.details}</p>
+              <div className="documentations flex flex-wrap text-center gap-3 mb-3 max-md:justify-center">
+                {experience.documentations.map((doc, i) => (
+                  <a target='blank' href={doc.url} className="link whitespace-nowrap text-sm flex items-center gap-2" key={i}>
+                    {doc.icon} {doc.name}
+                  </a>
+                ))}
+              </div>
+              <div className="categories flex flex-wrap text-center gap-3 max-md:justify-center">
+                {experience.categories.map((category, i) => (
+                  <span className="badge whitespace-nowrap text-xs" key={i}>{category}</span>
+                ))}
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
       ))}
+
     </>
   );
 };

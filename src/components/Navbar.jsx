@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './Navbar.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('');
@@ -12,6 +14,12 @@ const Navbar = () => {
 
   //ATTIVAZIONE DEL LINK IN BASE ALL'ALTEZZA DELLO SCROLL
   useEffect(() => {
+    AOS.init({
+      duration: 800, 
+      easing: 'ease-in-out', 
+      once: true,
+    });
+
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 100; //+ 100px per i margin/padding eventuali
       sections.forEach((section) => {
@@ -49,6 +57,7 @@ const Navbar = () => {
     <nav className="routes-list max-lg:hidden">
       {sections.map((section) => (
         <a 
+          data-aos="fade-left"
           key={section.id} 
           onClick={() => handleClick(section.id)}
           className={`route flex items-center ${activeSection === section.id ? 'active' : ''}`}
