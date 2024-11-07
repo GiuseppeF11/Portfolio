@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import './Projects.css';
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "./Projects.css";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { FaLink } from "react-icons/fa6";
 import CurrencyConverter from "../assets/projects/Currency Converter.png";
@@ -20,23 +20,23 @@ function Projects() {
     if (!aosDisabled) {
       AOS.init({
         duration: 800,
-        easing: 'ease-in-out',
+        easing: "ease-in-out",
         once: true,
       });
     }
 
-    const mediaQuery = window.matchMedia('(pointer: fine)');
+    const mediaQuery = window.matchMedia("(pointer: fine)");
     setIsDesktop(mediaQuery.matches);
 
     const handleChange = (e) => setIsDesktop(e.matches);
-    mediaQuery.addEventListener('change', handleChange);
+    mediaQuery.addEventListener("change", handleChange);
 
-    return () => mediaQuery.removeEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
   }, [aosDisabled]);
 
   const handleMouseEnter = (index) => {
     setHoveredIndex(index);
-    setAosDisabled(true); 
+    setAosDisabled(true);
   };
 
   const handleMouseLeave = () => {
@@ -46,85 +46,92 @@ function Projects() {
 
   const projects = [
     {
-      date: '2024',
-      name: 'Portfolio',
-      description: "Un sito portfolio per presentarmi con le mie esperienze ed alcuni dei miei progetti.",
-      link: 'https://github.com/GiuseppeF11/Portfolio',
+      date: "2024",
+      name: "Portfolio",
+      description:
+        "Un sito portfolio per presentarmi con le mie esperienze ed alcuni dei miei progetti.",
+      link: "https://github.com/GiuseppeF11/Portfolio",
       image: Portfolio,
       documentations: [
-        { name: 'React Icons', url: 'https://react-icons.github.io/react-icons/' },
-        { name: 'Tailwind', url: 'https://tailwindcss.com/' },
+        {
+          name: "React Icons",
+          url: "https://react-icons.github.io/react-icons/",
+        },
+        { name: "Tailwind", url: "https://tailwindcss.com/" },
       ],
-      aos: 'fade-up',
-      categories: ['React.js']
+      aos: "fade-up",
+      categories: ["React.js"],
     },
     {
-      date: '2024',
-      name: 'Meridiano',
-      description: "App per pianificare ed organizzare viaggi, rivivere avventure passate a sfogliare gli album dei ricordi.",
-      link: 'https://github.com/GiuseppeF11/travel-app',
+      date: "2024",
+      name: "Meridiano",
+      description:
+        "App per pianificare ed organizzare viaggi, rivivere avventure passate a sfogliare gli album dei ricordi.",
+      link: "https://github.com/GiuseppeF11/travel-app",
       image: Meridiano,
       documentations: [
-        { name: 'Swiper', url: 'https://swiperjs.com/' },
-        { name: 'AOS.js', url: 'https://michalsnik.github.io/aos/' },
-        { name: 'Bootstrap', url: 'https://getbootstrap.com/' },
-        { name: 'FontAwesome', url: 'https://fontawesome.com/' },
+        { name: "Swiper", url: "https://swiperjs.com/" },
+        { name: "AOS.js", url: "https://michalsnik.github.io/aos/" },
+        { name: "Bootstrap", url: "https://getbootstrap.com/" },
+        { name: "FontAwesome", url: "https://fontawesome.com/" },
       ],
-      aos: 'fade-up',
-      categories: ['Laravel', 'Blade']
+      aos: "fade-up",
+      categories: ["Laravel", "Blade"],
     },
     {
-      date: '2024',
-      name: 'Myflix',
-      description: "Sito per consultare la più vasta libreria cinematografica, visualizzare i rispettivi trailer e creare una lista preferiti.",
-      link: 'https://github.com/GiuseppeF11/myflix',
+      date: "2024",
+      name: "Myflix",
+      description:
+        "Sito per consultare la più vasta libreria cinematografica, visualizzare i rispettivi trailer e creare una lista preferiti.",
+      link: "https://myflix-livid-theta.vercel.app/",
       image: Myflix,
       documentations: [
-        { name: 'The Movie DB', url: 'https://www.themoviedb.org/' },
-        { name: 'Swiper', url: 'https://swiperjs.com/' },
-        { name: 'Bootstrap', url: 'https://getbootstrap.com/' },
-        { name: 'FontAwesome', url: 'https://fontawesome.com/' },
+        { name: "The Movie DB", url: "https://www.themoviedb.org/" },
+        { name: "Swiper", url: "https://swiperjs.com/" },
+        { name: "Bootstrap", url: "https://getbootstrap.com/" },
+        { name: "FontAwesome", url: "https://fontawesome.com/" },
       ],
-      aos: 'fade-up',
-      categories: ['Vue.js', 'HTML', 'CSS', 'JavaScript']
+      aos: "fade-up",
+      categories: ["Vue.js", "HTML", "CSS", "JavaScript"],
     },
     {
-      date: '2024',
-      name: 'Currency Converter',
-      description: "Web-App per eseguire la conversione delle valute sfruttando i dati forniti dalla Banca Centrale Europea.",
-      link: 'https://github.com/GiuseppeF11/currency-converter',
+      date: "2024",
+      name: "Currency Converter",
+      description:
+        "Web-App per eseguire la conversione delle valute sfruttando i dati forniti dalla Banca Centrale Europea.",
+      link: "https://github.com/GiuseppeF11/currency-converter",
       image: CurrencyConverter,
       documentations: [
-        { name: 'Frankfurter', url: 'https://frankfurter.dev/' },
-        { name: 'Bootstrap', url: 'https://getbootstrap.com/' },
-        { name: 'FontAwesome', url: 'https://fontawesome.com/' },
+        { name: "Frankfurter", url: "https://frankfurter.dev/" },
+        { name: "Bootstrap", url: "https://getbootstrap.com/" },
+        { name: "FontAwesome", url: "https://fontawesome.com/" },
       ],
-      aos: 'fade-up',
-      categories: ['Vue.js', 'HTML', 'CSS', 'JavaScript']
+      aos: "fade-up",
+      categories: ["Vue.js", "HTML", "CSS", "JavaScript"],
     },
     {
-      date: '2024',
-      name: 'Fastbites',
+      date: "2024",
+      name: "Fastbites",
       description: "App di food-delivery ideata per consumatori e ristoratori.",
-      link: 'https://github.com/alessiopalmieri001/Fast-Bites-Backend-Bf',
+      link: "https://github.com/alessiopalmieri001/Fast-Bites-Backend-Bf",
       image: Fastbites,
       documentations: [
-        { name: 'Braintree', url: 'https://www.braintreepayments.com/fr' },
-        { name: 'Bootstrap', url: 'https://getbootstrap.com/' },
-        { name: 'FontAwesome', url: 'https://fontawesome.com/' },
+        { name: "Braintree", url: "https://www.braintreepayments.com/fr" },
+        { name: "Bootstrap", url: "https://getbootstrap.com/" },
+        { name: "FontAwesome", url: "https://fontawesome.com/" },
       ],
-      aos: 'fade-up',
-      categories: ['Vue.js', 'Laravel']
+      aos: "fade-up",
+      categories: ["Vue.js", "Laravel"],
     },
     {
-      date: '2024',
-      name: 'Spotify',
+      date: "2024",
+      name: "Spotify",
       description: "Emulazione della celebre app per la riproduzione musicale.",
-      link: 'https://github.com/GiuseppeF11/html-css-spotifyweb',
+      link: "https://github.com/GiuseppeF11/html-css-spotifyweb",
       image: Spotify,
       documentations: [],
-      aos: 'fade-up',
-      categories: ['HTML', 'CSS']
+      aos: "fade-up",
+      categories: ["HTML", "CSS"],
     },
   ];
 
@@ -132,12 +139,14 @@ function Projects() {
     <>
       {projects.map((project, index) => (
         <a
-          data-aos={!aosDisabled ? project.aos : ''} 
+          data-aos={!aosDisabled ? project.aos : ""}
           target="blank"
           href={project.link}
           key={index}
           className={`project card grid grid-flow-col gap-5 my-5 p-8 transition-all duration-300 ${
-            isDesktop && hoveredIndex !== null && hoveredIndex !== index ? 'brightness-50' : ''
+            isDesktop && hoveredIndex !== null && hoveredIndex !== index
+              ? "brightness-50"
+              : ""
           }`}
           onMouseEnter={() => handleMouseEnter(index)}
           onMouseLeave={handleMouseLeave}
@@ -147,19 +156,31 @@ function Projects() {
           </div>
           <div className="col-span-4">
             <h3 className="title color-white text-lg font-bold h-10 flex items-center mb-1 gap-1 max-md:justify-center lg:justify-start">
-              {project.name.length > 30 ? `${project.name.slice(0, 30)}...` : project.name} <span className="text-sm icon"><MdOutlineArrowOutward /></span>
+              {project.name.length > 30
+                ? `${project.name.slice(0, 30)}...`
+                : project.name}{" "}
+              <span className="text-sm icon">
+                <MdOutlineArrowOutward />
+              </span>
             </h3>
             <p className="text-sm mb-3">{project.description}</p>
             <div className="documentations flex flex-wrap text-center gap-3 mb-3 max-md:justify-center lg:justify-start">
               {project.documentations.map((doc, i) => (
-                <a target="blank" href={doc.url} className="link whitespace-nowrap text-sm flex items-center gap-2" key={i}>
+                <a
+                  target="blank"
+                  href={doc.url}
+                  className="link whitespace-nowrap text-sm flex items-center gap-2"
+                  key={i}
+                >
                   <FaLink /> {doc.name}
                 </a>
               ))}
             </div>
             <div className="categories flex flex-wrap text-center gap-3 my-5 max-md:justify-center lg:justify-start">
               {project.categories.map((category, i) => (
-                <span className="badge whitespace-nowrap text-xs" key={i}>{category}</span>
+                <span className="badge whitespace-nowrap text-xs" key={i}>
+                  {category}
+                </span>
               ))}
             </div>
 
