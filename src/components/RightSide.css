@@ -1,35 +1,33 @@
 /* RIGHTSIDE */
 .sticky {
-    position: -webkit-sticky; 
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1000;
-  }
-  
-  .right-side h1 {
+}
+
+.right-side h1 {
     background-color: rgba(15, 23, 42, 0);
     padding: 10px 0;
     margin: 0;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     font-size: 20px;
-  }
-  
-
+}
 
 .about a {
     cursor: pointer;
-        color: aliceblue;
-        font-weight: 600;
-        transition: 0.1s linear;
-        &:hover {
-            color: #54D3D4;
-        }
+    color: aliceblue;
+    font-weight: 600;
+    transition: 0.1s linear;
+    &:hover {
+        color: #54d3d4;
+    }
 }
 
 .badge {
     background-color: #183756;
-    color: #53CED0;
+    color: #53ced0;
     padding: 5px 15px;
     border-radius: 15px;
 }
@@ -44,18 +42,17 @@
 
 /* EXPERIENCES */
 
-.experiences , .projects {
-
+.experiences,
+.projects {
     .link {
         color: aliceblue;
         font-weight: 600;
         transition: 0.1s linear;
         &:hover {
-            color: #54D3D4;
+            color: #54d3d4;
         }
     }
 }
-
 
 .card {
     cursor: pointer;
@@ -75,7 +72,7 @@
     }
 
     .card:hover .title {
-        color: #53CED0;
+        color: #53ced0;
     }
 
     .card:hover img {
@@ -83,22 +80,20 @@
     }
 }
 
-
-
 .view-more {
     display: inline-block;
-    
+
     .text {
         border-bottom: 1px solid #183756;
         transition: 0.3s linear;
     }
-    
+
     &:hover {
         .text {
-            border-bottom: 1px solid #53CED0;
+            border-bottom: 1px solid #53ced0;
         }
-        
-        .icon{
+
+        .icon {
             transition: 0.1s linear;
             transform: translate(5px, 0px);
         }

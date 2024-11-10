@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
-import './Navbar.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import "./Navbar.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Navbar = () => {
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState("");
 
   const sections = [
-    { id: 'about', name: 'ABOUT' },
-    { id: 'experiences', name: 'EXPERIENCE' },
-    { id: 'projects', name: 'PROJECTS' }
+    { id: "about", name: "ABOUT" },
+    { id: "experiences", name: "EXPERIENCE" },
+    { id: "projects", name: "PROJECTS" },
   ];
 
   //ATTIVAZIONE DEL LINK IN BASE ALL'ALTEZZA DELLO SCROLL
   useEffect(() => {
     AOS.init({
-      duration: 800, 
-      easing: 'ease-in-out', 
+      duration: 800,
+      easing: "ease-in-out",
       once: true,
     });
 
@@ -28,16 +28,19 @@ const Navbar = () => {
           const offsetTop = element.offsetTop;
           const offsetHeight = element.offsetHeight;
 
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
             setActiveSection(section.id);
           }
         }
       });
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [sections]);
 
@@ -45,8 +48,9 @@ const Navbar = () => {
   const handleClick = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const offset = -80; 
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const offset = -80;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
         top: elementPosition + offset,
       });
@@ -56,12 +60,14 @@ const Navbar = () => {
   return (
     <nav className="routes-list max-lg:hidden">
       {sections.map((section) => (
-        <a 
+        <a
           data-aos="fade-left"
-          key={section.id} 
+          key={section.id}
           onClick={() => handleClick(section.id)}
-          className={`route flex items-center ${activeSection === section.id ? 'active' : ''}`}
-          style={{ cursor: 'pointer' }}
+          className={`route flex items-center ${
+            activeSection === section.id ? "active" : ""
+          }`}
+          style={{ cursor: "pointer" }}
         >
           <div className="line"></div>
           <span>{section.name}</span>

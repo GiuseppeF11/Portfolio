@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 * {
   margin: 0;
   padding: 0;
@@ -11,20 +10,25 @@
   scroll-behavior: smooth;
 }
 
-@media screen and (max-width:768px)  {
+@media screen and (max-width: 768px) {
   * {
     text-align: center;
   }
 }
 
 body {
-  background: radial-gradient(circle at var(--gradient-position-x) var(--gradient-position-y), rgba(32, 55, 107, 0.633), transparent 20%), var(--background-color);
+  background: radial-gradient(
+      circle at var(--gradient-position-x) var(--gradient-position-y),
+      rgba(32, 55, 107, 0.633),
+      transparent 20%
+    ),
+    var(--background-color);
   transition: background 0.1s ease-out;
 }
 
 :root {
   color: aliceblue;
-  --background-color: #0F172A;
+  --background-color: #0f172a;
   --gradient-position-x: 0px;
   --gradient-position-y: 0px;
   font-family: "Poppins", sans-serif;
@@ -40,8 +44,8 @@ body {
   color: #9ca3af;
 }
 
-.color-water{
-  color: #52CED0;
+.color-water {
+  color: #52ced0;
 }
 
 /* SCROLLBAR */
@@ -53,7 +57,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: var(--sb-size)
+  width: var(--sb-size);
 }
 
 body::-webkit-scrollbar-track {
@@ -64,12 +68,10 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
   border-radius: 3px;
-  
 }
 
 @supports not selector(::-webkit-scrollbar) {
   body {
-    scrollbar-color: var(--sb-thumb-color)
-                     var(--sb-track-color);
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   }
 }

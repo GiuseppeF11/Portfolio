@@ -1,7 +1,6 @@
 .project {
-
     &:hover {
-        .icon{
+        .icon {
             transition: 0.1s linear;
             transform: translate(5px, -5px);
         }
@@ -16,4 +15,3 @@
         transition: 0.3s linear;
     }
 }
-

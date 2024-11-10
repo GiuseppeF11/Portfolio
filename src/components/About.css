@@ -1,12 +1,5 @@
-.animate
-{
-  background-image: linear-gradient(
-    -225deg,
-    #0F172A 0%,
-    #52CED0 29%,
-    aliceblue 67%,
-    #2C6E91 100%
-  );
+.animate {
+  background-image: linear-gradient(-225deg, #0f172a 0%, #52ced0 29%, aliceblue 67%, #2c6e91 100%);
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
