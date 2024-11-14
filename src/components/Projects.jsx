@@ -99,7 +99,7 @@ function Projects() {
       name: "Currency Converter",
       description:
         "Web-App per eseguire la conversione delle valute sfruttando i dati forniti dalla Banca Centrale Europea.",
-      link: "https://github.com/GiuseppeF11/currency-converter",
+      link: "https://currency-converter-one-delta.vercel.app/",
       image: CurrencyConverter,
       documentations: [
         { name: "Frankfurter", url: "https://frankfurter.dev/" },
