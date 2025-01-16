@@ -36,7 +36,7 @@ const LeftSide = () => {
 
         <Navbar></Navbar>
 
-        <div className="flex sites my-5 gap-20 max-lg:hidden">
+        <div className="flex sites my-5 gap-10 max-lg:hidden">
           <Social></Social>
         </div>
       </section>

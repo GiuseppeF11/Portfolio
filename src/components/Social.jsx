@@ -5,6 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { SiCodewars } from "react-icons/si";
 import { FaInstagram } from "react-icons/fa";
+import { FaFileDownload } from "react-icons/fa";
 
 const Social = () => {
   useEffect(() => {
@@ -40,11 +41,17 @@ const Social = () => {
       aos: "fade-down",
       url: "https://www.instagram.com/giuseppefailla00/",
     },
+    {
+      name: "CV",
+      icon: <FaFileDownload />,
+      aos: "fade-down",
+      url: "/src/assets/documents/Giuseppe Failla CV.pdf",
+    },
   ];
   return (
     <>
       {socials.map((app) => (
-        <a data-aos={app.aos} target="blank" href={app.url}>
+        <a data-aos={app.aos} target="blank" href={app.url} >
           {" "}
           {app.icon}
         </a>
