@@ -6,6 +6,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { SiCodewars } from "react-icons/si";
 import { FaInstagram } from "react-icons/fa";
 import { FaFileDownload } from "react-icons/fa";
+import CV from "../assets/documents/Giuseppe Failla CV.pdf"
 
 const Social = () => {
   useEffect(() => {
@@ -45,7 +46,7 @@ const Social = () => {
       name: "CV",
       icon: <FaFileDownload />,
       aos: "fade-down",
-      url: "/src/assets/documents/Giuseppe Failla CV.pdf",
+      url: CV,
     },
   ];
   return (
