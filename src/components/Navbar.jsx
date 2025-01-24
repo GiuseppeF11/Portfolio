@@ -28,7 +28,7 @@ const Navbar = () => {
           to={section.id}
           spy={true}
           smooth={true}
-          offset={-80}
+          offset={-(window.innerHeight / 3)}
           duration={500}
           className="route flex items-center"
           activeClass="active"
