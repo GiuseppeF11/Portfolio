@@ -120,13 +120,7 @@ const Experiences = () => {
       title: "Diploma Scientifico",
       agency: "Liceo Scientifico e Linguistico 'Principe Umberto di Savoia' ",
       details: "100/100",
-      documentations: [
-        {
-          icon: <TbCertificate />,
-          name: "Certificato",
-          url: Diploma,
-        },
-      ],
+      documentations: [],
       aos: "fade-up",
       categories: [],
     },
