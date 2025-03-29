@@ -14,26 +14,28 @@ const About = () => {
 
   const abouts = [
     {
-      text: "Nato a Catania il 10 dicembre 2000, sono sempre stato incuriosito dal funzionamento delle cose. Smontavo tutto ciò che mi capitava per mano, e questa spinta mi ha portato a sviluppare una grande passione per la tecnologia .",
+      text: "Nato a Catania il 10 dicembre 2000, sono sempre stato estremamente curioso. La mia curiosità ha trovato libero sfogo nella tecnologia e nelle sue mille sfaccettature",
       links: [
         { word: "Catania", url: "#" },
         { word: "tecnologia", url: "#" },
       ],
     },
     {
-      text: "Sono appassionato di sports ed e-sports , suono la chitarra, nel weekend mi piace praticare trekking , trascorrere del tempo nella natura o fare delle escursioni in moto.",
+      text: "Sono appassionato di sports ed e-sports , suono la chitarra, ma soprattutto mi piace fare tante escursioni a piedi, in bici o in moto va bene lo stesso! Vivendo in Sicilia tra mare e montagna le strade da percorrere non mancano!",
       links: [
         { word: "sports", url: "#" },
         { word: "e-sports", url: "#" },
-        { word: "trekking", url: "#" },
+        { word: "escursioni", url: "#" },
+        { word: "mare", url: "#" },
+        { word: "montagna", url: "#" },
       ],
     },
     {
-      text: "Dall'ottobre del 2023 ad oggi mi occupo di web-development . Sono un full-stack developer ma prediligo il frontend in quanto mi consente di dare libero sfogo alla mia creatività.",
+      text: "Dal 2023 mi occupo di web-development come full-stack developer.",
       links: [
         { word: "web-development", url: "#" },
         { word: "full-stack", url: "#" },
-        { word: "frontend", url: "#" },
+        { word: "developer", url: "#" }
       ],
     },
   ];
@@ -43,6 +45,8 @@ const About = () => {
     "CSS",
     "JavaScript",
     "PHP",
+    "Python",
+    "C",
     "SQL",
     "Vue.js",
     "React.js",

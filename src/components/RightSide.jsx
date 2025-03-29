@@ -5,6 +5,7 @@ import "./RightSide.css";
 import About from "./About";
 import Projects from "./Projects";
 import Experiences from "./Experiences";
+import Studies from "./Studies";
 import { MdArrowForward } from "react-icons/md";
 
 const RightSide = () => {
@@ -24,12 +25,25 @@ const RightSide = () => {
           <div>
             <h1
               data-aos="fade-right"
-              className="text-white text-4xl font-bold mb-4 lg:hidden"
+              className="text-white text-4xl font-bold mb-4"
             >
-              ABOUT
+              Chi sono
             </h1>
           </div>
           <About></About>
+        </section>
+
+        {/* STUDIES */}
+        <section className="studies" id="studies">
+          <div>
+            <h1
+              data-aos="fade-right"
+              className="text-white text-4xl font-bold mb-4"
+            >
+              Formazione
+            </h1>
+          </div>
+          <Studies></Studies>
         </section>
 
         {/* EXPERIENCES */}
@@ -37,9 +51,9 @@ const RightSide = () => {
           <div>
             <h1
               data-aos="fade-right"
-              className="text-white text-4xl font-bold mb-4 lg:hidden"
+              className="text-white text-4xl font-bold mb-4"
             >
-              EXPERIENCE
+              Esperienze
             </h1>
           </div>
           <Experiences></Experiences>
@@ -50,7 +64,7 @@ const RightSide = () => {
               href="https://www.linkedin.com/in/giuseppe-failla-96a759194/"
               className="view-more title color-white text-lg font-bold flex items-center mb-1 gap-1"
             >
-              <span className="text max-md:text-sm">Vedi altro</span>
+              <span className="text max-md:text-sm">Scopri di più</span>
               <MdArrowForward className="icon" />
             </a>
           </div>
@@ -61,9 +75,9 @@ const RightSide = () => {
           <div>
             <h1
               data-aos="fade-right"
-              className="text-white text-4xl font-bold mb-4 lg:hidden"
+              className="text-white text-4xl font-bold mb-4"
             >
-              PROJECTS
+              Progetti
             </h1>
           </div>
           <Projects></Projects>

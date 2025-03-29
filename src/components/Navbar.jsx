@@ -7,9 +7,10 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("");
 
   const sections = [
-    { id: "about", name: "ABOUT" },
-    { id: "experiences", name: "EXPERIENCE" },
-    { id: "projects", name: "PROJECTS" },
+    { id: "about", name: "Chi sono" },
+    { id: "studies", name: "Formazione" },
+    { id: "experiences", name: "Esperienze" },
+    { id: "projects", name: "Progetti" },
   ];
 
   // ATTIVAZIONE DEL LINK IN BASE ALLO SCROLL

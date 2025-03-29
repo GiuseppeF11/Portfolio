@@ -2,14 +2,13 @@ import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaLink } from "react-icons/fa6";
-import "./Experiences.css";
 import { FaArrowUpLong } from "react-icons/fa6";
 import { TbCertificate } from "react-icons/tb";
 import Boolean_Certificate from "../assets/documents/Certificato Boolean.jpg";
 import HDI_Certificate from "../assets/documents/HDI.jpeg";
 import Diploma from "../assets/documents/Diploma.jpg";
 
-const Experiences = () => {
+const Studies = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [isDesktop, setIsDesktop] = useState(false);
 
@@ -29,62 +28,81 @@ const Experiences = () => {
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
-  const experiences = [
+  const studies = [
     {
-      start: "03/2025",
-      end: "In corso",
-      url: "https://marketing.timeflow.it/soluzione-timeflow?utm_source=Google+Ads&utm_medium=Search&utm_campaign=Lower&utm_id=Brand&utm_term=timeflow&utm_campaign=%5BFill_Blank_2024%5D_TimeFlow_Google_Search_IT_Ita_Lower_Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=7114086986&hsa_cam=21666716801&hsa_grp=166889050253&hsa_ad=712293741509&hsa_src=g&hsa_tgt=kwd-552597165568&hsa_kw=timeflow&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=Cj0KCQjwtJ6_BhDWARIsAGanmKdi17Q9e7StW_uYz3RGTlaMJC5GM_4OtDddx8S-RKpBi4kiE22hRlIaAopvEALw_wcB",
-      title: "Jr. Backend Developer",
-      agency: "Timeflow",
+      start: "11/2024",
+      end: "04/2025",
+      url: "https://stevejobs.academy/web-and-mobile-development/",
+      title: "Web & Mobile Development",
+      agency: "ITS Steve Jobs Academy",
       details:
-        "Piattaforma per la ricerca e gestione di fornitori IT",
+        "Corso di 1080 ore di lezioni per la progettazione ed implementazione di soluzioni web, mobile app e sistemi in cloud.",
       documentations: [],
       aos: "fade-up",
       categories: [
+        "React",
+        "Node Js",
+        "Flutter",
+        "MongoDB",
+        "C",
         "PHP",
-        "Laravel",
-        "Docker",
-        "AWS",
+        "Typescript",
       ],
     },
     {
-      start: "09/2022",
-      end: "09/2023",
-      url: "https://www.instagram.com/aavirzi/",
-      title: "Welfare Advisor - Consulente assicurativo",
-      agency: "A.A. Virzì Srl",
-      details: "Azienda di consulenza assicurativa, finanziaria e brokeraggio.",
+      start: "10/2023",
+      end: "04/2024",
+      url: "https://boolean.careers/?_gl=1*1beejpl*_up*MQ..*_ga*MzQ4ODQ1Mzc5LjE3Mjc3ODY0NTA.*_ga_Z7YQ75GL74*MTcyNzc4NjQ0OS4xLjAuMTcyNzc4NjQ0OS4wLjAuMA..",
+      title: "Jr Full Stack Web Developer Trainee",
+      agency: "Boolean Tech Academy",
+      details:
+        "Corso intensivo di 700 ore, dedicato allo studio delle principali tecnologie utilizzate nello Sviluppo Web.",
       documentations: [
         {
           icon: <TbCertificate />,
           name: "Certificato",
-          url: HDI_Certificate,
+          url: Boolean_Certificate,
         },
       ],
       aos: "fade-up",
       categories: [
-        "Consulenza",
-        "Vendita",
-        "Time Management",
-        "Problem Solving",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Laravel",
+        "Vue.js",
+        "PHP",
+        "MySQL",
       ],
     },
     {
-      start: "2020",
-      end: "2021",
-      url: "https://www.misericordie.it/",
-      title: "Servizio Civile",
-      agency: "Misericordia San Leone",
-      details: "Servizio come ambulanziere e trasporto disabili",
+      start: "10/2020",
+      end: "10/2022",
+      url: "https://www.unict.it/it/didattica/lauree-triennali/2023-2024/biotecnologie",
+      title: "Corso di Laurea Triennale in Biotecnologie",
+      agency: "Univeristà di Catania",
+      details: "",
       documentations: [],
       aos: "fade-up",
       categories: [
-        "First Aid",
-        "CPR",
-        "BLS",
-        "Driving Skills",
-        "Stress Management",
+        "Biologia Generale",
+        "Genetica",
+        "Economia Aziendale",
+        "Inglese",
+        "Informatica",
+        "Matematica",
       ],
+    },
+    {
+      start: "2014",
+      end: "2019",
+      url: "https://www.principeumberto.edu.it/",
+      title: "Diploma Scientifico",
+      agency: "Liceo Scientifico e Linguistico 'Principe Umberto di Savoia' ",
+      details: "100/100",
+      documentations: [],
+      aos: "fade-up",
+      categories: [],
     },
   ];
 
@@ -95,25 +113,19 @@ const Experiences = () => {
   };
 
   // Funzione per ordinare le esperienze in base alla data di fine
-const sortedExperiences = experiences.sort((a, b) => {
-  // Se una delle esperienze è "In corso", mettila per prima
-  if (a.end === "In corso") return -1;
-  if (b.end === "In corso") return 1;
-
-  const dateA = convertToDate(a.end);
-  const dateB = convertToDate(b.end);
-
-  // Ordina normalmente per la data
-  return dateB - dateA;
-});
+  const sortedStudies = studies.sort((a, b) => {
+    const dateA = convertToDate(a.end);
+    const dateB = convertToDate(b.end);
+    return dateB - dateA;
+  });
 
   return (
     <>
-      {sortedExperiences.map((experience, index) => (
+      {sortedStudies.map((study, index) => (
         <div data-aos="fade-up" key={index}>
           <a
             target="_blank"
-            href={experience.url}
+            href={study.url}
             className={`card grid grid-flow-col gap-5 my-5 p-8 transition-all duration-300 ${
               isDesktop && hoveredIndex !== null && hoveredIndex !== index
                 ? "brightness-50"
@@ -123,23 +135,23 @@ const sortedExperiences = experiences.sort((a, b) => {
             onMouseLeave={() => setHoveredIndex(null)}
           >
             <div className="date w-40 font-semibold h-10 text-gray-500 flex items-center max-md:justify-center lg:justify-start overflow-hidden max-xl:hidden ">
-              {experience.start}
+              {study.start}
               <span className="line bg-gray-500"></span>
-              {experience.end}
+              {study.end}
             </div>
             <div>
-              <h3 className="title text-lg font-bold">{experience.title}</h3>
+              <h3 className="title text-lg font-bold">{study.title}</h3>
               <h5 className="text-sm font-semibold text-gray-400 lg:mb-5">
-                {experience.agency}
+                {study.agency}
               </h5>
               <div className="date font-semibold h-10 text-gray-500 flex items-center max-md:justify-center lg:justify-start overflow-hidden mb-4 xl:hidden">
-                {experience.start}
+                {study.start}
                 <span className="line bg-gray-500"></span>
-                {experience.end}
+                {study.end}
               </div>
-              <p className="text-sm mb-3">{experience.details}</p>
+              <p className="text-sm mb-3">{study.details}</p>
               <div className="documentations flex flex-wrap text-center gap-3 mb-3 max-md:justify-center">
-                {experience.documentations.map((doc, i) => (
+                {study.documentations.map((doc, i) => (
                   <a
                     target="_blank"
                     href={doc.url}
@@ -151,7 +163,7 @@ const sortedExperiences = experiences.sort((a, b) => {
                 ))}
               </div>
               <div className="categories flex flex-wrap text-center gap-3 max-md:justify-center">
-                {experience.categories.map((category, i) => (
+                {study.categories.map((category, i) => (
                   <span className="badge whitespace-nowrap text-xs" key={i}>
                     {category}
                   </span>
@@ -165,4 +177,4 @@ const sortedExperiences = experiences.sort((a, b) => {
   );
 };
 
-export default Experiences;
+export default Studies;

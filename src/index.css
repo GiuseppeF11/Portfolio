@@ -19,7 +19,7 @@
 body {
   background: radial-gradient(
       circle at var(--gradient-position-x) var(--gradient-position-y),
-      rgba(27, 84, 218, 0.633),
+      rgba(23, 60, 146, 0.633),
       transparent 20%
     ),
     var(--background-color);
@@ -35,6 +35,9 @@ body {
 }
 
 /* PALETTE */
+.color-dark_blue{
+  color: #0f172a;
+}
 
 .color-white {
   color: aliceblue;

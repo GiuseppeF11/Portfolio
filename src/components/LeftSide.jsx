@@ -26,7 +26,7 @@ const LeftSide = () => {
             Giuseppe Failla
           </h1>
           <p data-aos="fade-left" className="role color-water">
-            Junior Web Developer
+            Full-Stack Developer
           </p>
           <p data-aos="fade-right" className=" md:w-3/4 color-gray mb-5">
             Creo soluzioni digitali, trasformando problemi complessi in codice
