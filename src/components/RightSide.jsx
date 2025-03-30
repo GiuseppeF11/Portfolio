@@ -6,6 +6,7 @@ import About from "./About";
 import Projects from "./Projects";
 import Experiences from "./Experiences";
 import Studies from "./Studies";
+import Contact from "./Contact";
 import { MdArrowForward } from "react-icons/md";
 
 const RightSide = () => {
@@ -94,6 +95,20 @@ const RightSide = () => {
               <MdArrowForward className="icon" />
             </a>
           </div>
+        </section>
+
+        {/* CONTACT */}
+        <section className="contact mb-36" id="contact">
+          <div>
+            <h1
+              data-aos="fade-left"
+              className="text-white text-4xl font-bold mb-4"
+            >
+              Contattami
+            </h1>
+          </div>
+          <Contact></Contact>
+          
         </section>
       </div>
     </>

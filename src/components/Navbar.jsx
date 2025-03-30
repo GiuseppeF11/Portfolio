@@ -11,6 +11,7 @@ const Navbar = () => {
     { id: "studies", name: "Formazione" },
     { id: "experiences", name: "Esperienze" },
     { id: "projects", name: "Progetti" },
+    { id: "contact", name: "Contattami" },
   ];
 
   // ATTIVAZIONE DEL LINK IN BASE ALLO SCROLL

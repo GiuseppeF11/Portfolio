@@ -26,6 +26,8 @@ body {
   transition: background 0.1s ease-out;
 }
 
+
+
 :root {
   color: aliceblue;
   --background-color: #0f172a;
@@ -35,7 +37,7 @@ body {
 }
 
 /* PALETTE */
-.color-dark_blue{
+.color-dark_blue {
   color: #0f172a;
 }
 
