@@ -10,7 +10,7 @@ const Contact = () => {
       easing: "ease-in-out",
       once: true,
     });
-  }, []); // Chiude correttamente useEffect
+  }, []); 
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -18,6 +18,11 @@ const Contact = () => {
     email: "",
     subject: "",
     message: "",
+  });
+
+  const [notification, setNotification] = useState({
+    message: "",
+    type: "",
   });
 
   const handleChange = (e) => {
@@ -32,18 +37,21 @@ const Contact = () => {
         "service_399qnfo", // Service ID
         "template_wfwt1dx", // Template ID
         {
-          name: formData.fullName, // Usa "name" come placeholder per il nome
-          email: formData.email, // Usa "email" come placeholder per l'email
-          subject: formData.subject, // Oggetto del messaggio
+          name: formData.fullName, 
+          email: formData.email, 
+          subject: formData.subject,
           message: formData.message,
           company: formData.company,
-          time: new Date().toLocaleString() // Usa un timestamp per "time"
+          time: new Date().toLocaleString(),
         },
         "xh52W1hySwx3Nh-Mq" // Public Key
       )
       .then(
         () => {
-          alert("Email inviata con successo!");
+          setNotification({
+            message: "Email inviata con successo!",
+            type: "success",
+          });
           setFormData({
             fullName: "",
             company: "",
@@ -51,9 +59,17 @@ const Contact = () => {
             subject: "",
             message: "",
           });
+
+          // Nascondere la notifica dopo 3 secondi
+          setTimeout(() => setNotification({ message: "", type: "" }), 3000);
         },
         (error) => {
-          alert("Errore nell'invio: " + error.text);
+          setNotification({
+            message: `Errore nell'invio: ${error.text}`,
+            type: "error",
+          });
+
+          setTimeout(() => setNotification({ message: "", type: "" }), 3000);
         }
       );
   };
@@ -111,6 +127,22 @@ const Contact = () => {
           Invia Messaggio
         </button>
       </form>
+
+      {/* Notifica */}
+      {notification.message && (
+        <div
+          className={`mt-4 p-3 rounded text-white ${
+            notification.type === "success" ? "bg-green-500" : "bg-red-500"
+          } transition-opacity duration-300`}
+          style={{
+            opacity: notification.message ? 1 : 0,
+            maxWidth: "300px", 
+            margin: "10px auto",
+          }}
+        >
+          {notification.message}
+        </div>
+      )}
     </div>
   );
 };
