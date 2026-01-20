@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./About.css";
@@ -41,21 +41,21 @@ const About = () => {
   ];
 
   const tecnologies = [
+    "React.js",
+    "Vue.js",
+    "PHP",
+    "AWS",
+    "JavaScript",
+    "Python",
     "HTML",
     "CSS",
-    "JavaScript",
-    "PHP",
-    "Python",
-    "C",
     "SQL",
-    "Vue.js",
-    "React.js",
     "SASS",
     "Laravel",
     "MySQL",
     "GIT",
     "Tailwind",
-    "Bootstrap",
+    "Bootstrap"
   ];
 
   return (

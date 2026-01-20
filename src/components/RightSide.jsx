@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./RightSide.css";
@@ -89,9 +89,8 @@ const RightSide = () => {
               href="https://github.com/GiuseppeF11?tab=repositories"
               className="view-more title color-white text-lg font-bold flex items-center  gap-1"
             >
-              <span className="text max-md:text-sm">
-                Vedi l'archivio completo
-              </span>
+              <span>{"Vedi l'archivio completo"}</span>
+
               <MdArrowForward className="icon" />
             </a>
           </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Projects.css";
@@ -8,6 +8,7 @@ import CurrencyConverter from "../assets/projects/Currency Converter.png";
 import Fastbites from "../assets/projects/Fastbites.png";
 import Meridiano from "../assets/projects/Meridiano.png";
 import Portfolio from "../assets/projects/Portfolio.png";
+import MeteoApp from "../assets/projects/MeteoApp.png";
 import Spotify from "../assets/projects/Spotify.png";
 import Myflix from "../assets/projects/Myflix.png";
 
@@ -45,6 +46,24 @@ function Projects() {
   };
 
   const projects = [
+    {
+      date: "2024",
+      name: "MeteoApp",
+      description:
+        "App meteo essenziale per avere un prospetto rapido delle condizioni meteo della giornata e settimana",
+      link: "https://meteo-app-ashy.vercel.app/",
+      image: MeteoApp,
+      documentations: [
+        {
+          name: "React Icons",
+          url: "https://react-icons.github.io/react-icons/",
+        },
+        { name: "Tailwind", url: "https://tailwindcss.com/" },
+        { name: "Weather API", url: "https://www.visualcrossing.com/weather-api/" },
+      ],
+      aos: "fade-up",
+      categories: ["React.js"],
+    },
     {
       date: "2024",
       name: "Portfolio",

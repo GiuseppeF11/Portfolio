@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "./LeftSide.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -29,8 +29,7 @@ const LeftSide = () => {
             Full-Stack Developer
           </p>
           <p data-aos="fade-right" className=" md:w-3/4 color-gray mb-5">
-            Creo soluzioni digitali, trasformando problemi complessi in codice
-            chiaro e funzionale.
+            SVILUPPO - SPERIMENTO - CREO
           </p>
         </div>
 
