@@ -52,7 +52,6 @@ const Navbar = () => {
       {sections.map((section) => (
         <a
           key={section.id}
-          data-aos="fade-left"
           onClick={() => handleClick(section.id)}
           className={`route flex items-center ${
             activeSection === section.id ? "active" : ""

@@ -33,7 +33,9 @@ const LeftSide = () => {
           </p>
         </div>
 
-        <Navbar></Navbar>
+        <div data-aos="fade-left">
+          <Navbar></Navbar>
+        </div>
 
         <div className="flex sites my-5 gap-10 max-lg:hidden">
           <Social></Social>
